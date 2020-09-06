@@ -7,6 +7,7 @@ import_heading_thirdparty = 'third-party imports'
 include_trailing_comma = 'true'
 known_third_party = [
   'pyarrow',
+  'pyspark',
   'smart_open',
 ]
 lines_after_imports = 2
