@@ -1,0 +1,20 @@
+[tool.isort]
+# isort fails to read the config unless booleans are stringly-typed.
+combine_as_imports = 'true'
+force_to_top = 'true'
+import_heading_stdlib = 'stdlib imports'
+import_heading_thirdparty = 'third-party imports'
+include_trailing_comma = 'true'
+known_third_party = [
+  'pyarrow',
+  'smart_open',
+]
+lines_after_imports = 2
+line_length = 80
+multi_line_output = 3
+order_by_type = 'true'
+skip = [
+  '.git',
+  '__pycache__',
+]
+use_parentheses = 'true'
