@@ -1,0 +1,15 @@
+# macOS temporary files
+.DS_Store
+
+# Python
+*.pyc
+__pycache__/
+
+# UNIX temporary files
+*~
+
+# Vim swap files
+*.swp
+
+# Virtualenv directories
+venv/

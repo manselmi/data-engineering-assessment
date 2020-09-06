@@ -1,0 +1,15 @@
+# * Normalize line endings on checkin (text).
+# * Prevent checkin of new whitespace errors if pre-commit hook checks
+#   for such errors (whitespace=…). For example:
+#   https://github.com/git/git/blob/master/templates/hooks--pre-commit.sample
+[attr]txt !bin !diff !eol !merge text whitespace=blank-at-eol,blank-at-eof,space-before-tab
+
+# * Don't display diffs (-diff).
+# * Don't convert line endings of normalized files on checkout (-eol).
+# * Take version from current branch as tentative merge result (-merge).
+# * Don't normalize line endings on checkin (-text).
+# * Don't notice any whitespace error (-whitespace).
+[attr]bin !txt -diff -eol -merge -text -whitespace
+
+*          txt
+*.parquet  bin
