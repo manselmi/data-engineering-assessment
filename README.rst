@@ -2,6 +2,8 @@
 Data Engineering assessment
 ===========================
 
+This exercise was completed in a macOS environment.
+
 Part 1
 ======
 
@@ -11,7 +13,8 @@ code.
 Prerequisites
 -------------
 
-* Python 3.6+
+* Python 3.6+ (may possibly work with Python < 3.6, but this has not
+  been tested)
 
 Prepare the environment by running the following code:
 
@@ -41,7 +44,7 @@ code.
 Prerequisites
 -------------
 
-* Docker
+* Docker (tested with Docker Desktop for Mac version 2.3.0.4)
 
 Download the necessary container image:
 
@@ -61,4 +64,5 @@ Invocation
       docker.io/bitnami/spark:latest \
       spark-submit /mnt/workspace/02.py
 
-Running this will create the ``02.parquet`` Parquet file.
+Running this will create the ``02.parquet`` Parquet file by running
+Spark in local mode.

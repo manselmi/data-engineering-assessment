@@ -21,8 +21,8 @@ from smart_open import open as sopen
 ENCODING = 'utf-8'
 
 
-# It's expected that the first line of the CSV file will be header with
-# the following column names in the same order.
+# It's expected that the first line of the CSV file will be a header
+# with the following column names in the same order.
 HEADER = [
     'VendorID',
     'lpep_pickup_datetime',
@@ -108,8 +108,9 @@ HEADER = [
 # digits from the source data.
 #
 # DECIMAL_DOLLAR: It seems unlikely that a total dollar amount would
-# equal $10,000 or more, so a precision of 6 is sufficient to preserve
-# the two fractional digits from the source data.
+# equal $10,000 or more, and indeed this does not occur within the
+# source data, so a precision of 6 is sufficient to preserve the two
+# fractional digits from the source data.
 INTEGER = pa.int16()
 TIMESTAMP = pa.timestamp(unit='s', tz='America/New_York')
 BOOLEAN = pa.bool_()
